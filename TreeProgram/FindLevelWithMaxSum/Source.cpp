@@ -123,6 +123,13 @@ int findSumofAllTheElement(TreeNode* root) {
 	return sum;
 }
 
+int findSumofAllTheElementInRecur(TreeNode* root) {
+	if (root == nullptr)
+		return 0;
+	else return (root->data + findSumofAllTheElementInRecur(root->left) +
+		findSumofAllTheElementInRecur(root->right));
+}
+
 int main() {
 	TreeNode* root{};
 	int sum{}, maxLevel{};
@@ -142,6 +149,7 @@ int main() {
 
 	cout << "Level with max sum is: " << maxLevel << "\n" << "Sum is: " << sum << endl;
 	cout << "Sum of all the element: " << findSumofAllTheElement(root) << endl;
+	cout << "Sum of all the element with recr: " << findSumofAllTheElementInRecur(root);
 
 	return 0;
 }
