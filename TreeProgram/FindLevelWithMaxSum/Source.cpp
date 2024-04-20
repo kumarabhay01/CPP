@@ -73,6 +73,7 @@ void printInLevelOredr(TreeNode* root) {
 	cout << endl;
 }
 
+//Find Level Will Max Sum
 int findMaxSumInLevel(TreeNode* root, int& sum) {
 	int height{}, level{};
 	
@@ -103,6 +104,25 @@ int findMaxSumInLevel(TreeNode* root, int& sum) {
 	return level;
 }
 
+//Find Sum of all the element in the tree
+int findSumofAllTheElement(TreeNode* root) {
+	int sum{};
+	queue<TreeNode*> que;
+	if (root)
+		que.push(root);
+
+	while (!que.empty()) {
+		TreeNode* curr = que.front();
+		que.pop();
+		sum += curr->data;
+		if (curr->left)
+			que.push(curr->left);
+		if (curr->right)
+			que.push(curr->right);
+	}
+	return sum;
+}
+
 int main() {
 	TreeNode* root{};
 	int sum{}, maxLevel{};
@@ -120,7 +140,8 @@ int main() {
 
 	maxLevel = findMaxSumInLevel(root, sum);
 
-	cout << "Level with max sum is: " << maxLevel << "\n" << "Sum is: " << sum;
+	cout << "Level with max sum is: " << maxLevel << "\n" << "Sum is: " << sum << endl;
+	cout << "Sum of all the element: " << findSumofAllTheElement(root) << endl;
 
 	return 0;
 }
