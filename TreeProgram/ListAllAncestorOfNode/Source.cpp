@@ -52,6 +52,22 @@ int printAllAncestors(TreeNode* root, TreeNode* node) {
 	return 0;
 }
 
+bool printAncestors(TreeNode* root, int target) {
+	if (root == nullptr)
+		return false;
+
+	if (root->data == target)
+		return true;
+
+	// Check left subtree
+	if (printAncestors(root->left, target) || printAncestors(root->right, target)) {
+		std::cout << root->data << "\t"; // Print the ancestor
+		return true;
+	}
+
+	return false;
+}
+
 int main() {
 	TreeNode* root = createNode(1);
 	root->left = createNode(2);
@@ -65,5 +81,7 @@ int main() {
 	printInLevelOrder(root);
 
 	printAllAncestors(root, root->right->right->left);
+	cout << endl;
+	printAncestors(root, 8);
 	return 0;
 }
