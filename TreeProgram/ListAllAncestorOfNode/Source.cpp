@@ -61,6 +61,7 @@ int main() {
 	root->right->left = createNode(6);
 	root->right->right = createNode(7);
 	root->right->right->left = createNode(8);
+	root->right->right->right = createNode(9);
 	printInLevelOrder(root);
 
 	printAllAncestors(root, root->right->right->left);
