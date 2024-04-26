@@ -50,7 +50,7 @@ void insertNodeToBT(TreeNode** root, int data) {
 	}
 }
 
-void printInLevelOredr(TreeNode* root) {
+void printInLevelOrder(TreeNode* root) {
 	TreeNode* temp{};
 	queue<TreeNode*> que;
 
@@ -160,7 +160,7 @@ int main() {
 	insertNodeToBT(&root, 6);
 	insertNodeToBT(&root, 3);
 	insertNodeToBT(&root, 4);
-	printInLevelOredr(root);
+	printInLevelOrder(root);
 
 	cout << "Number of leaf node : " << noOfLeafNode(root) << endl;
 	cout << "Number of full node : " << noOfFullNode(root) << endl;
