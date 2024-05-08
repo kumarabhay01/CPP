@@ -38,7 +38,7 @@ void reverseWords(string s)
 }
 
 
-	string reverseWords(string s) {
+	string reverseWords1(string s) {
 		reverse(s.begin(), s.end());
 		int n = s.size();
 		int left = 0;
