@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e00f35d2-43cd-488d-8bda-665b6c0346c4}</ProjectGuid>
-    <RootNamespace>TwoSum</RootNamespace>
+    <ProjectGuid>{ae8a81e7-f2b4-4031-a65f-02634341f315}</ProjectGuid>
+    <RootNamespace>My153Sum</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

@@ -4,7 +4,7 @@
 using namespace std;
 vector<int> twoSum(vector<int>& nums, int target) {
     unordered_map<int, int> numMap;
-    int n = nums.size();
+    size_t n = nums.size();
 
     for (int i = 0; i < n; i++) {
         int complement = target - nums[i];
@@ -19,7 +19,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
 
 vector<int> twoSumBruteForce(vector<int>& nums, int target) {
     vector<int> returnValue;
-    int length = nums.size();
+    size_t length = nums.size();
     for (int i = 0; i <= length - 2; i++) {
         for (int j = i + 1; j <= length - 1; j++) {
             if (target == nums[i] + nums[j]) {
@@ -31,6 +31,6 @@ vector<int> twoSumBruteForce(vector<int>& nums, int target) {
     return returnValue;
 }
 
-int main(){
+int main() {
 
 }
