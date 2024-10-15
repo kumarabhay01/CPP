@@ -78,6 +78,8 @@ void zigZagTraversal(TreeNode* root) {
 	}
 }
 
+
+
 int main() {
 	TreeNode* root = createNode(1);
 	root->left = createNode(2);
